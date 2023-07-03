@@ -1,5 +1,5 @@
 {
-  "compatibilityLevel": 1550,
+  "compatibilityLevel": 1567,
   "model": {
     "annotations": [
       {
@@ -72,16 +72,6 @@
         "expression": "\"Tenant_Glennis_Dev_Development_2023-05-17T15-00Z\" meta [IsParameterQuery=true, List={\"Tenant_Glennis_Dev_Development_2023-05-17T15-00Z\", \"sqldb-appcoretest-may-dev-use\", \"Tenant_CRMDev_Development\", \"Tenant_Implementation_Development\"}, DefaultValue=\"Tenant_Glennis_Dev_Development_2023-05-17T15-00Z\", Type=\"Text\", IsParameterQueryRequired=true]",
         "kind": "m",
         "lineageTag": "754b6b8b-bd05-4f0a-bfcf-216989a762d4"
-      }
-    ],
-    "relationships": [
-      {
-        "name": "534e2acf-964e-4582-ba48-a94fd0cf9784",
-        "fromColumn": "TransactionDate",
-        "fromTable": "PaymentTransaction_SQLDb",
-        "joinOnDateBehavior": "datePartOnly",
-        "toColumn": "Date",
-        "toTable": "LocalDateTable_74ef9604-b1cd-426c-a57a-ea51126aeefe"
       }
     ],
     "sourceQueryCulture": "en-IN",
@@ -299,214 +289,6 @@
         ]
       },
       {
-        "name": "LocalDateTable_74ef9604-b1cd-426c-a57a-ea51126aeefe",
-        "annotations": [
-          {
-            "name": "__PBI_LocalDateTable",
-            "value": "true"
-          }
-        ],
-        "columns": [
-          {
-            "name": "Date",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              }
-            ],
-            "dataCategory": "PaddedDateTableDates",
-            "dataType": "dateTime",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "isNameInferred": true,
-            "lineageTag": "58240550-b592-4beb-914d-86adfa5ca18a",
-            "sourceColumn": "[Date]",
-            "summarizeBy": "none",
-            "type": "calculatedTableColumn"
-          },
-          {
-            "name": "Day",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Day"
-              }
-            ],
-            "dataCategory": "DayOfMonth",
-            "dataType": "int64",
-            "expression": "DAY([Date])",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "lineageTag": "7c435f7b-395b-4d45-9551-a9d18c46041f",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Month",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Month"
-              }
-            ],
-            "dataCategory": "Months",
-            "dataType": "string",
-            "expression": "FORMAT([Date], \"MMMM\")",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "lineageTag": "6c9db9ed-9894-424b-b110-0632ab9d7e9d",
-            "sortByColumn": "MonthNo",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "MonthNo",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "MonthNumber"
-              }
-            ],
-            "dataCategory": "MonthOfYear",
-            "dataType": "int64",
-            "expression": "MONTH([Date])",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "lineageTag": "c3aedd41-6b5d-495e-b594-8e6ff7604e9c",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Quarter",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Quarter"
-              }
-            ],
-            "dataCategory": "Quarters",
-            "dataType": "string",
-            "expression": "\"Qtr \" & [QuarterNo]",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "lineageTag": "f84ce403-86d4-4427-8dab-4fc5acead786",
-            "sortByColumn": "QuarterNo",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "QuarterNo",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "QuarterNumber"
-              }
-            ],
-            "dataCategory": "QuarterOfYear",
-            "dataType": "int64",
-            "expression": "INT(([MonthNo] + 2) / 3)",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "lineageTag": "6f0b4daa-495f-40a4-a2b0-9d4f433df445",
-            "summarizeBy": "none",
-            "type": "calculated"
-          },
-          {
-            "name": "Year",
-            "annotations": [
-              {
-                "name": "SummarizationSetBy",
-                "value": "User"
-              },
-              {
-                "name": "TemplateId",
-                "value": "Year"
-              }
-            ],
-            "dataCategory": "Years",
-            "dataType": "int64",
-            "expression": "YEAR([Date])",
-            "isDataTypeInferred": true,
-            "isHidden": true,
-            "lineageTag": "f26a01d8-2f87-47f0-ac56-c8842ea97339",
-            "summarizeBy": "none",
-            "type": "calculated"
-          }
-        ],
-        "hierarchies": [
-          {
-            "name": "Date Hierarchy",
-            "annotations": [
-              {
-                "name": "TemplateId",
-                "value": "DateHierarchy"
-              }
-            ],
-            "levels": [
-              {
-                "name": "Year",
-                "column": "Year",
-                "lineageTag": "b6182061-231f-4e65-81de-85ea08701194",
-                "ordinal": 0
-              },
-              {
-                "name": "Quarter",
-                "column": "Quarter",
-                "lineageTag": "2b957485-ac61-47b6-9219-cfc34c6ac38c",
-                "ordinal": 1
-              },
-              {
-                "name": "Month",
-                "column": "Month",
-                "lineageTag": "35315d0b-62a6-4fd8-9cee-44b5747c5cbf",
-                "ordinal": 2
-              },
-              {
-                "name": "Day",
-                "column": "Day",
-                "lineageTag": "59fe0e61-adaa-4089-a5a6-f2980141f032",
-                "ordinal": 3
-              }
-            ],
-            "lineageTag": "07b8c534-34ac-4ac7-a945-91bbd3031800"
-          }
-        ],
-        "isHidden": true,
-        "lineageTag": "47cfb0d8-6fc0-4809-9374-2210f9e25dc3",
-        "partitions": [
-          {
-            "name": "LocalDateTable_74ef9604-b1cd-426c-a57a-ea51126aeefe-d56911b6-8f09-4f20-9472-2308e8b0a79f",
-            "mode": "import",
-            "source": {
-              "expression": "Calendar(Date(Year(MIN('PaymentTransaction_SQLDb'[TransactionDate])), 1, 1), Date(Year(MAX('PaymentTransaction_SQLDb'[TransactionDate])), 12, 31))",
-              "type": "calculated"
-            }
-          }
-        ],
-        "showAsVariationsOnly": true
-      },
-      {
         "name": "PaymentTransaction_SQLDb",
         "annotations": [
           {
@@ -636,22 +418,15 @@
                 "value": "Automatic"
               }
             ],
-            "dataType": "dateTime",
-            "formatString": "General Date",
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "string",
             "lineageTag": "40227d23-67cb-4898-89d0-b89a3f2dfe88",
             "sourceColumn": "TransactionDate",
-            "summarizeBy": "none",
-            "variations": [
-              {
-                "name": "Variation",
-                "defaultHierarchy": {
-                  "hierarchy": "Date Hierarchy",
-                  "table": "LocalDateTable_74ef9604-b1cd-426c-a57a-ea51126aeefe"
-                },
-                "isDefault": true,
-                "relationship": "534e2acf-964e-4582-ba48-a94fd0cf9784"
-              }
-            ]
+            "summarizeBy": "none"
           },
           {
             "name": "TransactionId",
