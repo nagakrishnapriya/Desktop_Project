@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.40\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY22SU11\",\"version\":\"5.40\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY22SU11",
+            "path": "BaseThemes/CY22SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"235eb46c4d5554150687\",\"layouts\":[{\"id\":0,\"position\":{\"x\":9.597322175732218,\"y\":0,\"z\":0,\"width\":1243.5387447698745,\"height\":719.7991631799163}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Query1.CommunityName\"},{\"queryRef\":\"PaymentTransaction_SQLDb.Email\"},{\"queryRef\":\"PaymentTransaction_SQLDb.TransactionAmount\"},{\"queryRef\":\"PaymentTransaction_SQLDb.TransactionStatus\"},{\"queryRef\":\"PaymentTransaction_SQLDb.Phone\"},{\"queryRef\":\"PaymentTransaction_SQLDb.ResidentName\"},{\"queryRef\":\"CountNonNull(PaymentTransaction_SQLDb.TransactionId)\"},{\"queryRef\":\"PaymentTransaction_SQLDb.ReferenceNumber\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"q\",\"Entity\":\"PaymentTransaction_SQLDb\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"CommunityName\"},\"Name\":\"Query1.CommunityName\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"TransactionId\"}},\"Function\":5},\"Name\":\"CountNonNull(PaymentTransaction_SQLDb.TransactionId)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Email\"},\"Name\":\"PaymentTransaction_SQLDb.Email\",\"NativeReferenceName\":\"Email\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"ResidentName\"},\"Name\":\"PaymentTransaction_SQLDb.ResidentName\",\"NativeReferenceName\":\"ResidentName\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"Phone\"},\"Name\":\"PaymentTransaction_SQLDb.Phone\",\"NativeReferenceName\":\"Phone\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"TransactionStatus\"},\"Name\":\"PaymentTransaction_SQLDb.TransactionStatus\",\"NativeReferenceName\":\"TransactionStatus\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"TransactionAmount\"},\"Name\":\"PaymentTransaction_SQLDb.TransactionAmount\",\"NativeReferenceName\":\"TransactionAmount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"ReferenceNumber\"},\"Name\":\"PaymentTransaction_SQLDb.ReferenceNumber\",\"NativeReferenceName\":\"ReferenceNumber\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"q\"}},\"Property\":\"TransactionId\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 719.80,
+          "width": 1243.54,
+          "x": 9.60,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
